@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+
 import ChildComponent, { Child } from './Child.js';
+import TimerComponent from './Timer.js';
 
 function App() {
   const text = "Cynthia";
@@ -20,6 +22,7 @@ function App() {
       <ChildComponent name="Jason" age={26} />
       <ChildComponent name="MinSoo" age={35 }/>
       <ChildComponent name="YeongHee" age={24} />
+      <TimerComponent />
     </div>
   );
 }

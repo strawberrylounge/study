@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const ChildComponent = (props) => {
     const {name, age} = props;
