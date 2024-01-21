@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 function Timer() {
     const [time, setTime] = React.useState(0);
     console.log('컴포넌트 업데이트');
-    function updateTime() {
-        setTime(time+1);
-    }
+    useEffect(function() {
+      setTime(time+1);
+    },[]);
   return (
     <div>
         <h3>{time}초</h3>
-        <button onClick={updateTime}>Click</button>
+        <button>Click</button>
     </div>
   )
 }
