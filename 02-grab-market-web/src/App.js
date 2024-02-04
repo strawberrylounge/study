@@ -34,7 +34,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPageComponent />} />
           <Route path="/products/:id" element={<ProductPage />} />
-          <Route path="/upload" eleme nt={<UploadPage />} />
+          <Route path="/upload" element={<UploadPage />} />
         </Routes>
       </div>
       <div id="footer"></div>
