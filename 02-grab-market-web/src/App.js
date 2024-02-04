@@ -9,9 +9,9 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<MainPageComponent />}></Route>
-        <Route path="/product" element={<ProductPage />}></Route>
-        <Route path="/upload" element={<UploadPage />}></Route>
+        <Route path="/" element={<MainPageComponent />} />
+        <Route path="/products/:id" element={<ProductPage />} />
+        <Route path="/upload" element={<UploadPage />} />
       </Routes>
     </div>
   );
