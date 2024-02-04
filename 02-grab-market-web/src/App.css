@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html,
 body,
 #root,
@@ -8,8 +13,20 @@ body,
 #header {
   display: flex;
   justify-content: center;
-  height: 64;
+  height: 64px;
   border-bottom: 1px solid gray;
+}
+
+#header-area {
+  display: flex;
+  align-items: center;
+  width: 1024px;
+  height: 100%;
+}
+
+#header-area img {
+  width: 128px;
+  height: 36px;
 }
 
 #body {

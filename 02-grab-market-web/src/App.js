@@ -1,6 +1,6 @@
 import "./App.css";
 import MainPageComponent from "./main/index.js";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Link } from "react-router-dom";
 
 import UploadPage from "./upload";
 import ProductPage from "./product";
@@ -10,7 +10,9 @@ function App() {
     <div>
       <div id="header">
         <div id="header-area">
-          <img src="/images/icons/logo.png" alt="" />
+          <Link to="/">
+            <img src="/images/icons/logo.png" alt="" />
+          </Link>
         </div>
       </div>
       <div id="body">
