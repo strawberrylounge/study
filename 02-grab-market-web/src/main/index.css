@@ -66,7 +66,6 @@
 .product-seller {
   display: flex;
   align-items: center;
-  margin-top: 12px;
 }
 
 .product-avatar {
@@ -90,6 +89,6 @@
   color: rgb(136, 136, 136);
 }
 
-#product-headline {
+/* #product-headline {
   margin-top: 8px;
-}
+} */
