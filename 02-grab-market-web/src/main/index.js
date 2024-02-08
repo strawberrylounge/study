@@ -5,6 +5,7 @@ import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 
 import "./index.css";
+import { API_URL } from "../config/constants.js";
 
 dayjs.extend(relativeTime);
 
@@ -12,7 +13,7 @@ const MainPage = () => {
   const [products, setProducts] = useState([]);
   useEffect(function () {
     axios
-      .get("http://localhost:8080/products")
+      .get(`${API_URL}/products`)
       .then(function (result) {
         const products = result.data.products;
         setProducts(products);
@@ -34,7 +35,11 @@ const MainPage = () => {
             <div className="product-card">
               <Link to={`/products/${product.id}`} className="product-link">
                 <div>
-                  <img src={product.imageUrl} className="product-img" alt="" />
+                  <img
+                    src={`${API_URL}/${product.imageUrl}`}
+                    className="product-img"
+                    alt=""
+                  />
                 </div>
                 <div className="product-contents">
                   <span className="product-name">{product.name}</span>

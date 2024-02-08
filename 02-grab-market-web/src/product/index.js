@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import "./index.css";
+import { API_URL } from "../config/constants";
 
 const ProductPage = () => {
   const { id } = useParams();
@@ -10,7 +11,7 @@ const ProductPage = () => {
 
   useEffect(function () {
     axios
-      .get(`http://localhost:8080/products/${id}`)
+      .get(`${API_URL}/products/${id}`)
       .then(function (result) {
         setProduct(result.data.product);
       })
@@ -26,7 +27,7 @@ const ProductPage = () => {
   return (
     <div>
       <div id="image-box">
-        <img src={"/" + product.imageUrl} alt="" />
+        <img src={`${API_URL}/${product.imageUrl}`} alt="" />
       </div>
       <div id="profile-box">
         <img src="/images/icons/avatar.png" alt="" />

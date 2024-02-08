@@ -44,3 +44,10 @@
   background-color: rgb(30, 120, 255);
   color: white;
 }
+
+#upload-img {
+  width: 200px;
+  height: 200px;
+  margin-left: 16px;
+  object-fit: contain;
+}
