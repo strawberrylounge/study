@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 
 import "./index.css";
 import { API_URL } from "../config/constants";
+import dayjs from "dayjs";
 
 const ProductPage = () => {
   const { id } = useParams();
@@ -36,8 +37,10 @@ const ProductPage = () => {
       <div id="contents-box">
         <div id="name">{product.name}</div>
         <div id="price">{product.price}</div>
-        <div id="createdAt">2020년 12월 8일</div>
-        <div id="description">{product.description}</div>
+        <div id="createdAt">
+          {dayjs(product.createdAt).format("YYYY년 MM월 DD일")}
+        </div>
+        <pre id="description">{product.description}</pre>
       </div>
     </div>
   );

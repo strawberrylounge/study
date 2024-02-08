@@ -1,12 +1,23 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Button, Divider, Form, Input, InputNumber, Upload } from "antd";
+import {
+  Button,
+  Divider,
+  Form,
+  Input,
+  InputNumber,
+  Upload,
+  message,
+} from "antd";
+import { useNavigate } from "react-router-dom";
 
 import "./index.css";
 import { API_URL } from "../config/constants";
 
 const UploadPage = () => {
   const [imageUrl, setImageUrl] = useState(null);
+  const navigate = useNavigate();
+
   const onSubmit = (values) => {
     axios
       .post(`${API_URL}/products`, {
@@ -18,9 +29,11 @@ const UploadPage = () => {
       })
       .then((result) => {
         console.log(result);
+        navigate("/", { replace: true });
       })
       .catch((err) => {
         console.error(err);
+        message.error(`에러가 발생했습니다. ${err.message}`);
       });
   };
 
