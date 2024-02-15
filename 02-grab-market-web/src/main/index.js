@@ -55,6 +55,7 @@ const MainPage = () => {
         {products.map(function (product, index) {
           return (
             <div className="product-card">
+              {product.soldout === 1 && <div className="product-blur" />}
               <Link to={`/products/${product.id}`} className="product-link">
                 <div>
                   <img
